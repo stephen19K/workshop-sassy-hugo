@@ -249,7 +249,7 @@ Go back to the `index.html` file and lets replace the body with this:
   Adding this after the above "Pages" code will let us see the first ten posts.
   Notice that we require the type of the file to be "post" as we defined in our archetype.
   Also, the above code included links to each post and page so we can navigate to them. Try this out.
-  
+
   If you cannot navigate to your "About" and "Getting Started" pages, add `type: "page"` to each of those
   page's frontmatter and the links should now work. This is because we have a conditional in the code above
   looking for files of type "page".
@@ -298,7 +298,7 @@ Play around with it if you wish.
 
 ### Partials
 
-As mentioned above, partial templates can be used in building other templates or files, 
+As mentioned above, partial templates can be used in building other templates or files,
 almost like a constant that stores a code block.
 Open up `themes/theme-name/layouts/partials/header.html` and let's make a partial
 to store the header for our html documents.
@@ -371,7 +371,7 @@ You should now see your styling changes have been applied to the main page.
 Add a few quick styling changes to make your page unique.
 
 This is obviously an extremely simple theme, but hopefully it shows how a theme
-can be made quickly and applied to the pages of your site. 
+can be made quickly and applied to the pages of your site.
 
 ### Reverting to Ananke
 
@@ -388,8 +388,15 @@ Let's change our site back to using the 'ananke' theme. Change the `theme` field
 
 Now that you have a beautiful site setup, let's prepare to deploy it! :rocket: :rocket:
 
-**Before you do anything below, go to your `posts`, `about.md` and `getting-started.md` files, and turn the `drafts` flags in each Markdown file to `false`**.
+**Before you do anything below, you need to revert the changes that you did to your template / posts as follows:**
 
+1. Go to your `posts`, `about.md` and `getting-started.md` files, and turn the `drafts` flags in each Markdown file to `false`, and delete the `type` flag which you created earlier.
+
+2. Go into `config.toml` and remove the `baseURL` field.
+
+Now, you can do the following steps to deploy and run on Surge.
+
+**Note**: When creating a new site from a pre-existing theme, you won't have to run through the above steps. You can just go straight to hosting and deployment.
 
 1. Install Surge CLI (if you **haven't already done so** for your past short assignments and labs)
 
