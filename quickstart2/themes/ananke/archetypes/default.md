@@ -1,6 +1,8 @@
 +++
-title =  "{{ replace .TranslationBaseName "-" " " | title }}"
-date = {{ .Date }}
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+draft: true
+type: "post"
 tags = []
 featured_image = ""
 description = ""
